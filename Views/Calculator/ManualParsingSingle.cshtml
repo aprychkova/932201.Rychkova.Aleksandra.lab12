@@ -1,0 +1,17 @@
+﻿<h2>Manual</h2>
+<form asp-action="ManualParsingSingle" method="post">
+        <div>
+            @Html.Label("number1", "Число 1")
+            @Html.TextBox("number1", "", new { @class = "form-control", type = "number" })
+        </div>
+        <div>
+            @Html.Label("operation", "Операция")
+            @Html.DropDownList("operation", new SelectList(new[] { "+", "-", "*", "/" }), new { @class = "form-control" })
+        </div>
+        <div>
+            @Html.Label("number2", "Число 2")
+            @Html.TextBox("number2", "", new { @class = "form-control", type = "number" })
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
